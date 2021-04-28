@@ -36,15 +36,17 @@ a{
 .home{
     display:flex ;
     width:100%;
-    height:95vh;
+    height:100vh;
     background-color: cadetblue; 
     /* background-image:url("/home/codex/project/background.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    bottom: 5%;
 }
 
 .back-ends{
+    clear: left;
     display:flex ;
     width:100%;
     height:95vh;
@@ -53,8 +55,19 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    /* bottom: 5%; */
     
 }
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
+
+/* .back-end{
+    height: 100%;
+    width: 95vh;
+} */
 
 .back-end p:nth-child(1){
     font-size: 50px;
@@ -67,6 +80,7 @@ a{
 
 
 nav{
+    clear: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,6 +88,20 @@ nav{
     background-color:white;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding: 0px 5%;
+}
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
+/* fixing the navigation bar to one position */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 95%;
 }
 
 nav,ul{
@@ -85,6 +113,24 @@ nav ul li a{
     font-family: myrida pro regular;
     color:gray;
     font-weight: 700;
+}
+
+nav ul li a .sep{
+    margin: 0 28px;
+    opacity: 0.3;
+}
+
+nav ul li a .contact{
+    /* margin-left:80px; */
+    font-family: myrida pro regular;
+    color:gray;
+    font-weight: 400;
+}
+
+nav ul li .contact{
+    font-size: 14px;
+    letter-spacing: 2px;
+    /* margin-left:100px; */
 }
 
 nav ul li a:hover{
@@ -146,12 +192,19 @@ nav ul li a:hover{
 }
 
 .text-container{
+    clear: left;
     position: absolute;
     left:13%;
     top:42%;
     transform:translate(-13%, -42%) ;
 
 }
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
 
 .text-container button{
     width: 130px;
@@ -167,17 +220,18 @@ nav ul li a:hover{
 }
 
 
-.cv-btn{
+/* .cv-btn{
     border: 2px solid #424242;
     color: rgb(63, 62, 62);
+    border-radius: 20px;
+    background-color: white;
 }
 
 .article-btn{
-    background-color: black;
+    background-color:white;
     color: white;
-    border: none;
-
-}
+    border-radius: 20px;
+} */
 
 button:active{
     transform:scale(1.1) ;
@@ -197,9 +251,16 @@ button:active{
 
 /* about */
 
-.about-container{
+.about{
     width: 100%;
-    height: 95vh;
+    height: 100vh;
+    bottom: 5%;
+}
+
+.about-container{
+    clear: left;
+    width: 100%;
+    height: 100vh;
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -207,8 +268,14 @@ button:active{
     position: relative;
     justify-content: space-around;
     align-items: center;
+    bottom: 5%;
     
 }
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
 
 .about-container img{
     height: 250px;
@@ -250,17 +317,57 @@ button:active{
 .about-text button{
     width: 120px;
     height:40px;
-    color: white;
+    /* color: white; */
     outline: none;
-    border:none;
+    box-shadow: grey;
+    font-size: 15px;
+    border-radius: 5px;
     font-family:calibri;
-    background-color: #262525;
+    background-color: white;
+}
+
+.about-text button a{
+    color: black;
+    font-family: myrida pro regular;
+    font-weight: bold;
+}
+
+.about-text button:hover{
+    background-color: cadetblue;
+}
+
+.about-text button a:hover{
+    color:white;
 }
 
 /* front-end */
-.front-end{
+.front-endOne{
+    clear: left;
     width: 100%;
-    /* height: 95vh; */
+    height: 100vh;
+    bottom: 5%;
+    margin: auto;
+    /* top:5%; */
+}
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
+
+.front-end{
+    clear: left;
+    width: 100%;
+    height: 150vh;
+    bottom: 5%;
+    margin: auto;
+    /* top:5%; */
+}
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
 }
 
 /* .front-endOne{
@@ -295,11 +402,13 @@ button:active{
 } */
 
 .box-1, .box-2, .box-3, .box-4, .box-5{
+    clear: left;
     width: 300px;
-    height: 320px;
+    height: 350px;
+    background-color: cadetblue;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,7 +416,14 @@ button:active{
     margin: 50px;
 }
 
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
 .front-endTwo{
+    height: 100vh;
+    clear: left;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -316,19 +432,39 @@ button:active{
     align-items: center;
     /* justify-content: space-around; */
     /* justify-content: space-between; */
-    margin: 0px;
+    margin: auto;
+    /* top:5%; */
+}
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
 }
 
 .box-1 span, .box-2 span, .box-3 span, .box-4 span{
     width: 40px;
-    height: 40px;
+    height: 30px;
     border-radius: 50%;
     background-color: white;
     justify-content: center;
     align-items: center;
     font-family: calbri;
     font-weight: bold;
+    /* display:block; */
+    text-align: center;
+}
 
+.box-1 span {
+    padding-top: 10px;
+}
+
+.box-2 span {
+    padding-top: 10px;
+    
+}
+
+.box-3 span {
+    padding-top: 10px;
 }
 
 
@@ -339,8 +475,10 @@ button:active{
 .box-5 p:nth-child(1){
     font-family: calibri;
     color: white;
-    font-size: 23px;
+    font-size: 15px;
     line-height: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .box-1 p:nth-child(2),
@@ -350,7 +488,7 @@ button:active{
 .box-5 p:nth-child(2){
     font-family: calibri;
     width: 230px;
-    color: #8f8f8f;
+    color: white;
     font-size: 23px;
     text-align: center;
     margin: 0px 0px 30px 0px;
@@ -362,28 +500,45 @@ button:active{
 .box-4 button,
 .box-5 button{
     width: 100px;
-    height: 30px;
+    height:40px;
     background-color: white;
     /* border: none; */
     outline: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 14px;
+    padding-bottom: 5px;
     
 }
 
 
 
 
+
+
 .heading{
+    padding-top: 20px;
     margin-left: 20px;
 
 }
 
-.info{
-    text-align: justify;
+
+.box-1 .info{
+    padding-bottom: 10px;
     margin: 20px;
 
 }
 
+.box-2 .info{
+    text-align: justify;
+    margin: 20px;
+    padding-bottom: 5px;
+}
+
+.box-3 .info{
+    padding-bottom: 2px;
+    margin: 10px;
+}
 /* 
 .social-icons{ 
     position: absolute;
@@ -419,6 +574,7 @@ button:active{
 } */
 
 .footer{
+    clear: left;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -426,6 +582,12 @@ button:active{
     align-items: center;
     position: relative;
 }
+
+.clearfix{
+    overflow: auto;
+    zoom:1;
+}
+
 
 .social-icons i{
     width: 60px;
@@ -490,4 +652,48 @@ button:active{
 .social-bar i{
     color: black;
     font-size: 20px;
+}
+
+/* Contact details */
+/* .contact-details ul{
+    display: flex;
+    left: 100px;
+}
+
+.contact-details ul li a{
+    margin: 30px;
+    font-family: myrida pro regular;
+    color:gray;
+    font-weight: 700;
+}
+
+.contact-details ul li a:hover{
+    color:cadetblue;
+}
+
+.contact-details ul li a:sep{
+    margin: 0 28px;
+    opacity: 0.3;
+} */
+
+.front-endTwo button a{
+    color: black;
+    font-family: myrida pro regular;
+    font-weight: bold;
+}
+
+.front-endTwo button:hover{
+    background-color: cadetblue;
+}
+
+.front-endTwo button a:hover{
+    color:white;
+}
+
+
+.front-endTwo .front-text p{
+    display: block;
+    width:100%;
+    bottom: 5px;
+
 }
